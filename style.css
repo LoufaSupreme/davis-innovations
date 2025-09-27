@@ -1,0 +1,226 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: Arial;
+    margin: 0;
+}
+
+:root {
+    /* color parameters */
+    --clr-dark: 240 3% 7%;
+    --clr-light: 231 77% 90%;
+    --clr-white: 0 0% 100%;
+    --clr-light-text: 204, 7%, 85%;
+    --clr-correct : 115 29% 43%;
+    --clr-present : 49 51% 47%;
+    --vh: 1vh;
+}
+
+body {
+    background-color: hsl(var(--clr-dark));
+    background-size: 100vw 100vh;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    color: hsl(var(--clr-dark));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding: 0;
+    font-size: clamp(.5rem, 2.5vmin, 1.5rem);
+    /* transition: background-color 5s ease; */
+}
+
+.header {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid hsla(var(--clr-white) / 0.3);
+    text-align: center;
+    width: 80vw;
+    max-width: 600px; 
+}
+
+.title {
+    color: hsla(var(--clr-white) / 0.8);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: clamp(2rem, 4vmin, 4rem);
+    padding: 0 4rem 0 4rem;
+    letter-spacing: 0.2rem;
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.stats-btn-container {
+    cursor: pointer;
+
+}
+
+.stats-btn {
+    background-color: inherit;
+    border: none;
+    fill: hsla(var(--clr-white) / 0.3);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.stats-btn > svg {
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.alert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 10vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    gap: 0.5rem;
+    z-index: 200;
+}
+
+.alert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: hsla(var(--clr-white) / 0.86);
+    color: hsl(var(--clr-dark));
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 250ms ease-out;
+}
+
+.alert.hide {
+    opacity: 0;
+}
+
+#version-modal > .modal-container {
+    width: 35rem;
+    padding: 4.5rem 1rem 4.5rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #version-modal > .modal-container {
+        padding: 2.5rem 1rem 2.5rem 1rem;
+    }
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 100;
+}
+
+.modal.hide {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: hsl(var(--clr-light-text));
+    width: 400px;
+    max-width: 80vw;
+    position: relative;
+    background: hsl(var(--clr-dark));
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.modal-exit {
+    fill: hsl(var(--clr-light-text));
+    position: absolute;
+    top: 0.6rem;
+    right: 0.6rem;
+    cursor: pointer;
+}
+
+.modal-title {
+    display: flex;
+    padding-top: 1rem;
+    padding-bottom: 0.8rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    font-size: clamp(0.7rem, 5.2vmin, 1rem);
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
+
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(3.5rem, 3.5vw));
+    grid-auto-rows: minmax(3.5rem, 3.5vw);
+    gap: 0.25em;
+    justify-content: center;
+    align-content: center;
+    flex: 1;
+    padding: 1.5rem;
+    max-width: 80vw;
+}
+
+@media only screen and (max-width: 600px) {
+    .tiles {
+        gap: 0.5em;
+    }
+}
+
+.tile {
+    border: 0.1rem solid hsla(var(--clr-white) / 0.3);
+    color: hsl(var(--clr-light-text));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.5em, 2.5vmin, 2em);
+    font-weight: bold;
+    background-color: hsl(
+        var(--hue, 240), 
+        var(--saturation, 3%), 
+        calc(var(--lightness-offset, 0%) + var(--lightness, 7%))
+    );
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 250ms ease-in-out;
+}
+
+@media only screen and (max-width: 600px) {
+    .tile {
+        font-size: clamp(0.5em, 5vmin, 2em);
+    }
+}
+
+footer {
+    color: hsla(var(--clr-white) / 0.4);
+    font-size: clamp(0.5rem, 1.4vmin, 0.8rem);
+    position: fixed;
+    bottom: 0.7rem;
+}
+
+footer > a {
+    text-decoration: none;
+    color: hsla(var(--clr-white) / 0.4);
+}

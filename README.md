@@ -1,8 +1,8 @@
 # Davis Innovations Landing Page
 
 Goals:
+ - simple
  - dark and light mode
  - mobile responsive
  - gradient background
- - simple
  - one hidden easter egg
