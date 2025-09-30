@@ -4,5 +4,7 @@ Goals:
  - simple
  - dark and light mode
  - mobile responsive
- - gradient background
+ - gradient background or moving bubbles
+ - glass theme tiles
+ - flippable tiles
  - one hidden easter egg
