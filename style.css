@@ -46,6 +46,12 @@ body {
     /* transition: background-color 5s ease; */
 }
 
+img {
+  max-width: 100%; /* Prevents images from exceeding their parent's width */
+  height: auto;    /* Maintains aspect ratio when width is constrained */
+  display: block;  /* Removes extra space below inline images */
+}
+
 @keyframes moveInCircle {
   0% {
     transform: rotate(0deg);
@@ -210,9 +216,9 @@ body {
 
 .tiles {
     display: grid;
-    grid-template-columns: repeat(3, minmax(7rem, 7vw));
+    /* grid-template-columns: repeat(3, minmax(14rem, 7vw)); */
     /* grid-template-columns: repeat(3) */
-    grid-auto-rows: minmax(7rem, 7vw);
+    /* grid-auto-rows: minmax(10rem, 7vw); */
     gap: 0.35em;
     justify-content: center;
     align-content: center;
@@ -250,6 +256,36 @@ body {
       font-size: clamp(0.5em, 5vmin, 2em);
       }
   } */
+
+.tile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.tile-half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile-img {
+  border-radius: 50%;
+  aspect-ratio: 1;
+  padding: 0.75rem;
+  margin: 1rem;
+  position: relative;
+}
+
+.tile-icons {
+  display: flex;
+}
+
+.tile-icons .icon {
+  flex: 1;
+}
 
 .backdrop {
   position: absolute;
