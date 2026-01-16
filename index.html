@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./stylesheets/guassianblur.css">
     <link rel="stylesheet" href="./stylesheets/glass.css">
     <link rel="stylesheet" href="./stylesheets/alerts.css">
+    <link rel="stylesheet" href="./stylesheets/modal.css">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <!-- Google fonts -->
@@ -45,52 +46,49 @@
     </div>
   </div>
 
-  <div class="main">
-    <div class="alert-container"></div>
-    <div id="version-modal" class="modal hide">
-        <div class="modal-container">
-            <div id="version-close-btn" class="modal-exit">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                    <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>  
-            </div>
-        </div>
-    </div>
+  <div class="alert-container"></div>
+  <div id="version-modal" class="modal hide">
+      <div class="modal-container">
+          <div id="version-close-btn" class="modal-exit">
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                  <path fill="var(--color-tone-3)" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+              </svg>  
+          </div>
+      </div>
+  </div>
 
-    <div class="header">
+  <div class="main">
+    <header id="header">
       <div class="title">Davis Innovations</div>
+    </header>
+
+    <div id="content">
+      <div class="tiles">
+        <div class="tile">1
+          
+        </div>
+        <!-- <div class="tile">2
+          <div class="backdrop"></div>
+          <div class="backdrop-edge"></div>
+          <svg class="svg-mask" preserveAspectRatio="none">
+            <mask id="frostyGlassMask">
+              <rect class="header-rect" x="25%" y="25%" width="50%" height="50%" fill="white"/>
+            </mask>
+          </svg>
+        </div>
+        <div class="tile">3
+          <div class="backdrop"></div>
+          <div class="backdrop-edge"></div>
+          <svg class="svg-mask" preserveAspectRatio="none">
+            <mask id="frostyGlassMask">
+              <rect class="header-rect" x="25%" y="25%" width="50%" height="50%" fill="white"/>
+            </mask>
+          </svg>
+        </div> -->
+      </div>
     </div>
   
-    <div class="tiles">
-      <div class="tile">1
-        <div class="backdrop"></div>
-        <div class="backdrop-edge"></div>
-        <svg class="svg-mask" preserveAspectRatio="none">
-          <mask id="frostyGlassMask">
-            <rect class="header-rect" x="25%" y="25%" width="50%" height="50%" fill="white"/>
-          </mask>
-        </svg>
-      </div>
-      <div class="tile">2
-        <div class="backdrop"></div>
-        <div class="backdrop-edge"></div>
-        <svg class="svg-mask" preserveAspectRatio="none">
-          <mask id="frostyGlassMask">
-            <rect class="header-rect" x="25%" y="25%" width="50%" height="50%" fill="white"/>
-          </mask>
-        </svg>
-      </div>
-      <div class="tile">3
-        <div class="backdrop"></div>
-        <div class="backdrop-edge"></div>
-        <svg class="svg-mask" preserveAspectRatio="none">
-          <mask id="frostyGlassMask">
-            <rect class="header-rect" x="25%" y="25%" width="50%" height="50%" fill="white"/>
-          </mask>
-        </svg>
-      </div>
-    </div>
-    <footer>Copyright © Davis Innovations Inc.</footer>
+    <footer id="footer">Copyright © Davis Innovations Inc.</footer>
   </div>
 </body>
 </html>
