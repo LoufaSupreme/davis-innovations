@@ -1,0 +1,76 @@
+:root {
+  --thickness: 2px; 
+}
+
+.tile {
+  background-color: rgba(255,255,255,0.03);
+  border: none;
+}
+
+.backdrop {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  right: 0;
+  bottom: 0;
+  left: -50%;
+  backdrop-filter: blur(16px);
+  mask-image: url(#frostyGlassMask);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.svg-mask {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+}
+
+.backdrop-edge {
+  position: absolute;
+  height: 200%;
+  width: 200%;
+  top: -50%;
+  right: 0;
+  bottom: 0;
+  left: -50%;
+  background: hsl(0deg 0% 100% / 0.1);
+  backdrop-filter: blur(8px) brightness(150%);
+  pointer-events: none;
+
+  /* Create 4 border strips + 4 corner pieces */
+  mask-image: 
+    linear-gradient(black, black), /* top border */
+    linear-gradient(black, black), /* bottom border */
+    linear-gradient(black, black), /* left border */
+    linear-gradient(black, black), /* right border */
+    radial-gradient(circle at top left, transparent 0, transparent var(--border-radius), black var(--border-radius), black calc(var(--border-radius) + var(--thickness)), transparent calc(var(--border-radius) + var(--thickness))), /* top-left corner */
+    radial-gradient(circle at top right, transparent 0, transparent var(--border-radius), black var(--border-radius), black calc(var(--border-radius) + var(--thickness)), transparent calc(var(--border-radius) + var(--thickness))), /* top-right corner */
+    radial-gradient(circle at bottom left, transparent 0, transparent var(--border-radius), black var(--border-radius), black calc(var(--border-radius) + var(--thickness)), transparent calc(var(--border-radius) + var(--thickness))), /* bottom-left corner */
+    radial-gradient(circle at bottom right, transparent 0, transparent var(--border-radius), black var(--border-radius), black calc(var(--border-radius) + var(--thickness)), transparent calc(var(--border-radius) + var(--thickness))); /* bottom-right corner */
+  
+  mask-size:
+    calc(50% - var(--border-radius) * 2) var(--thickness),  /* wide, tall. top border (shortened for corners) */
+    calc(50% - var(--border-radius) * 2) var(--thickness),  /* bottom border */
+    var(--thickness) calc(50% - var(--border-radius) * 2),  /* left border */
+    var(--thickness) calc(50% - var(--border-radius) * 2),  /* right border */
+    calc(var(--border-radius) + var(--thickness)) calc(var(--border-radius) + var(--thickness)),             /* bottom-right corner */
+    calc(var(--border-radius) + var(--thickness)) calc(var(--border-radius) + var(--thickness)),             /* bottom-left corner */
+    calc(var(--border-radius) + var(--thickness)) calc(var(--border-radius) + var(--thickness)),             /* top-right corner */
+    calc(var(--border-radius) + var(--thickness)) calc(var(--border-radius) + var(--thickness));             /* top-left corner */
+  
+  mask-position:
+    50% 25%,  /* top border */
+    50% 75%,  /* bottom border */
+    25% 50%,  /* left border */
+    75% 50%,  /* right border */
+
+    calc(75% - var(--border-radius) / 4) calc(75% - var(--border-radius) / 4), /* bottom-right corner */
+    calc(25% + var(--border-radius) / 4) calc(75% - var(--border-radius) / 4), /* bottom-left corner */
+    calc(75% - var(--border-radius) / 4) calc(25% + var(--border-radius) / 4), /* top-right corner */
+    calc(25% + var(--border-radius) / 4) calc(25% + var(--border-radius) / 4); /* top-left corner */
+
+  mask-repeat: no-repeat;
+}
