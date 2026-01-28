@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./stylesheets/glass.css">
     <link rel="stylesheet" href="./stylesheets/alerts.css">
     <link rel="stylesheet" href="./stylesheets/modal.css">
+    <link rel="stylesheet" href="./stylesheets/tile.css">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="favicon.png"/>
     <!-- Google fonts -->
@@ -65,7 +66,16 @@
     <div id="content">
       <div class="tiles">
         <div class="tile">1
-          
+          <div class="tile-title"></div>
+          <div class="tile-body">
+            <svg width="0" height="0">
+              <clipPath id="card-clip" clipPathUnits="objectBoundingBox">
+                <!-- <path class="clip-path" d="M 0.025,0.1 L 0.4875,0.1 A0.025,0.025 0,0,0 0.5125,0.0875 L 0.5125,0.0125 A0.025,0.025 0,0,1 0.5375,0 L 0.575,0 L 0.975,0 A0.025,0.025 0,0,1 1,0.025 L 1,0.975 A0.025,0.025 0,0,1 0.975,1 L 0.025,1 A0.025,0.025 0,0,1 0,0.975 L 0,0.125 A0.025,0.025 0,0,1 0.025,0.1 Z"></path> -->
+                <path class="clip-path" d="M 0.025,0.1 L 0.475,0.1 A0.025,0.025 0,0,0 0.5,0.0875 L 0.5,0.025 A0.025,0.025 0,0,1 0.525,0 L 0.575,0 L 0.975,0 A0.025,0.025 0,0,1 1,0.025 L 1,0.975 A0.025,0.025 0,0,1 0.975,1 L 0.025,1 A0.025,0.025 0,0,1 0,0.975 L 0,0.125 A0.025,0.025 0,0,1 0.025,0.1 Z"></path>
+              </clipPath>
+            </svg>
+          </div>
+          <div class="tile-bottom"></div>
         </div>
         <!-- <div class="tile">2
           <div class="backdrop"></div>

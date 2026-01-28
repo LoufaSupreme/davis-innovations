@@ -70,69 +70,6 @@ header {
   flex: 1;
 }
 
-.tiles {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(7rem, 7vw));
-    /* grid-template-columns: repeat(3) */
-    grid-auto-rows: minmax(7rem, 7vw);
-    gap: 0.35em;
-    justify-content: center;
-    align-content: center;
-    flex: 1;
-    max-width: 80vw;
-    overflow-y: scroll;
-    scrollbar-width: none;
-    padding: 1rem;
-  }
-  
-/* @media only screen and (max-width: 600px) {
-  .tiles {
-    gap: 0.5em;
-  }
-} */
-    
-.tile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  position: relative;
-  border: 2px solid rgba(255 255 255 / 0.3);
-  border-radius: var(--border-radius);
-  color: hsl(var(--clr-light-text));
-  cursor: pointer;
-  transition: all 0.1s ease-in-out;
-}
-
-.tile:hover {
-  transform:scale(1.05)
-}
-  
-/* @media only screen and (max-width: 600px) {
-  .tile {
-      font-size: clamp(0.5em, 5vmin, 2em);
-      }
-  } */
-  
-.tile-title {
-    
-}
-
-.tile-imgContainer {
-
-}
-
-.tile-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.tile-footer {
-  
-}
-
 footer {
   color: hsla(var(--clr-white) / 0.4);
   font-size: clamp(0.5rem, 1.4vmin, 0.8rem);

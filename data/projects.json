@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Shmurdle",
+    "description": "Wordle, with a twist!",
+    "link": "https://shmurdle-uu5e7.ondigitalocean.app/",
+    "image": "../shmurdle.png",
+    "tech_stack": ["javascript", "local_storage"],
+  },
+  {
+    "title": "",
+    "description": "",
+    "link": "",
+    "image": "",
+    "tech_stack": [],
+  },
+]

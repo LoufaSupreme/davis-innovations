@@ -1,0 +1,27 @@
+.tiles {
+    width: 80vw;
+    max-width: 80vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 0.35em;
+    justify-content: center;
+    align-content: center;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 1rem;
+  }
+  
+/* @media only screen and (max-width: 600px) {
+  .tiles {
+    grid-template-columns: repeat(3, minmax(7rem, 7vw));
+  }
+} */
+
+.tile {
+  position: relative;
+  background: rgba(255 255 255 / 0.25);
+  cursor: pointer;
+  aspect-ratio: 3 / 4;
+  clip-path: url(#card-clip);
+}
