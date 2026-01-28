@@ -67,8 +67,8 @@ function setClipPath(tile) {
 
     pathd += ` L ${arcStart.x},${arcStart.y} A ${cornerRadius},${cornerRadius} 0 0 ${sweep} ${arcEnd.x},${arcEnd.y}`;
   }
-  const lastCoord = coords.at(-1);
-  pathd += ` L ${lastCoord.x},${lastCoord.y} Z`;
+  
+  pathd += ' Z'
   console.log(pathd)
 
   const clipPath = tile.querySelector('.clip-path')
