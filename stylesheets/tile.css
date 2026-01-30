@@ -6,7 +6,6 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 0.35em;
     justify-content: center;
-    align-content: center;
     overflow-y: scroll;
     scrollbar-width: none;
     padding: 1rem;
@@ -20,8 +19,29 @@
 
 .tile {
   position: relative;
-  background: rgba(255 255 255 / 0.25);
+  /* background: rgba(255 255 255 / 0.25); */
   cursor: pointer;
-  aspect-ratio: 3 / 4;
+  aspect-ratio: 1 / 1;
+}
+
+.tile .tile-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 12%;
+  width: 52%;
+  background: red;
+  clip-path: url(#card-title-clip);
+}
+
+.tile .tile-bg {
+  position: absolute;
+  inset: 0;
   clip-path: url(#card-clip);
+}
+
+.tile img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
