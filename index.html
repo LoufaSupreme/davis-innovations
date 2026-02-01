@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="./stylesheets/resets.css">
     <link rel="stylesheet" href="./stylesheets/style.css">
     <link rel="stylesheet" href="./stylesheets/guassianblur.css">
     <link rel="stylesheet" href="./stylesheets/glass.css">
@@ -12,10 +18,6 @@
     <link rel="stylesheet" href="./stylesheets/tile.css">
     <script src="script.js" defer></script>
     <link rel="icon" type="image/png" href="favicon.png"/>
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap" rel="stylesheet">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DMREQL2NYK"></script>
     <script>
@@ -65,42 +67,28 @@
 
     <div id="content">
       <div class="tiles">
-        <div class="tile">
-          <div class="tile-title">
-            <svg width="0" height="0">
-              <clipPath id="card-title-clip" clipPathUnits="objectBoundingBox">
-                <path class="title-clip-path" d=""></path>
-              </clipPath>
-            </svg>
-          </div>
-          <div class="tile-bg">
-            <img src="./images/shmurdle.png" alt="">
-            <svg width="0" height="0">
-              <clipPath id="card-clip" clipPathUnits="objectBoundingBox">
-                <path class="card-clip-path" d="M 0.025,0.1 L 0.475,0.1 A0.025,0.025 0,0,0 0.5,0.0875 L 0.5,0.025 A0.025,0.025 0,0,1 0.525,0 L 0.575,0 L 0.975,0 A0.025,0.025 0,0,1 1,0.025 L 1,0.975 A0.025,0.025 0,0,1 0.975,1 L 0.025,1 A0.025,0.025 0,0,1 0,0.975 L 0,0.125 A0.025,0.025 0,0,1 0.025,0.1 Z"></path>
-              </clipPath>
-            </svg>
-          </div>
-          <div class="tile-bottom"></div>
-        </div>
 
         <div class="tile">
-          <div class="tile-title">
-            <svg width="0" height="0">
-              <clipPath id="card-title-clip" clipPathUnits="objectBoundingBox">
-                <path class="title-clip-path" d=""></path>
-              </clipPath>
-            </svg>
+          <div class="tile-top">
+            <div class="tile-img-container">
+              <img class="tile-img" src="./images/shmurdle.png" alt="">
+            </div>
           </div>
-          <div class="tile-bg">
-            <img src="./images/slander.png" alt="">
-            <svg width="0" height="0">
-              <clipPath id="card-clip" clipPathUnits="objectBoundingBox">
-                <path class="card-clip-path" d="M 0.025,0.1 L 0.475,0.1 A0.025,0.025 0,0,0 0.5,0.0875 L 0.5,0.025 A0.025,0.025 0,0,1 0.525,0 L 0.575,0 L 0.975,0 A0.025,0.025 0,0,1 1,0.025 L 1,0.975 A0.025,0.025 0,0,1 0.975,1 L 0.025,1 A0.025,0.025 0,0,1 0,0.975 L 0,0.125 A0.025,0.025 0,0,1 0.025,0.1 Z"></path>
-              </clipPath>
-            </svg>
+          <div class="tile-btm">
+            <div class="tile-title">Shmurdle</div>
+            <div class="tile-descrip">The classic Wordle word game, with a twist!</div>
+            <div class="tile-icons">
+              <i class="icon">
+                <img class="icon" src="./images/icons/js.png" alt="">
+              </i>
+              <i class="icon">
+                <img class="icon" src="./images/icons/python.png" alt="">
+              </i>
+            </div>
+            <div class="tile-btns">
+              <button class="visit-btn">Visit</button>
+            </div>
           </div>
-          <div class="tile-bottom"></div>
         </div>
         
       </div>

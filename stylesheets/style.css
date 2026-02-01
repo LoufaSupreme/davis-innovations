@@ -1,9 +1,3 @@
-*, *::after, *::before {
-    box-sizing: border-box;
-    font-family: Arial;
-    margin: 0;
-}
-
 :root {
   /* color parameters */
   --clr-dark: 240 3% 7%;

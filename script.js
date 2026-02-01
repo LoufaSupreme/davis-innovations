@@ -81,24 +81,24 @@ function applyTileClipPaths(tile) {
   // tile title
   const cardTitleClipPath = tile.querySelector('.title-clip-path');
 
-  cornerRadius = 0.1;
-  // cutoutDepth = 0.1;
-  // cutoutWidth = 0.5;
+  // cornerRadius = 0.5;
+  // // cutoutDepth = 0.1;
+  // // cutoutWidth = 0.5;
 
-  const titleBGCoords = [
-    {x: cornerRadius, y: 0},
-    {x: 1, y: 0, in: 'right', out: 'down'},
-    {x: 1, y: 1, in: 'down', out: 'left'},
-    {x: 0, y: 1, in: 'left', out: 'up'},
-    {x: 0, y: cornerRadius, in: 'up', out: 'right'},
-    {x: cornerRadius, y: 0},
-  ];
+  // const titleBGCoords = [
+  //   {x: cornerRadius, y: 0},
+  //   {x: 1, y: 0, in: 'right', out: 'down'},
+  //   {x: 1, y: 1, in: 'down', out: 'left'},
+  //   {x: 0, y: 1, in: 'left', out: 'up'},
+  //   {x: 0, y: 0, in: 'up', out: 'right'},
+  //   {x: cornerRadius, y: 0},
+  // ];
 
-  setClipPath(cardTitleClipPath, titleBGCoords, cornerRadius);
+  // setClipPath(cardTitleClipPath, titleBGCoords, cornerRadius);
 }
 
 const tiles = document.querySelectorAll(".tile")
 tiles.forEach(tile => {
-  applyTileClipPaths(tile)
+  // applyTileClipPaths(tile)
 })
 // replaceTiles(tiles)

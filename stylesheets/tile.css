@@ -19,29 +19,66 @@
 
 .tile {
   position: relative;
-  /* background: rgba(255 255 255 / 0.25); */
   cursor: pointer;
   aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,rgb(1, 0, 24) 60%, 
+    rgb(8, 8, 82) 100%);
+  font-family: "Poppins", sans-serif;
+  color: white;
 }
 
-.tile .tile-title {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 12%;
-  width: 52%;
-  background: red;
-  clip-path: url(#card-title-clip);
+.tile-top {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+  /* ellipse(hor-r, vert-r at x,y */
+  clip-path: ellipse(70% 100% at 50% 0%);
+  background: hsl(0 0 0.5 / 0.75);
 }
 
-.tile .tile-bg {
-  position: absolute;
-  inset: 0;
-  clip-path: url(#card-clip);
+.tile-img-container {
+  height: 100%;
+  width: 70%;
 }
 
-.tile img {
-    height: 100%;
+.tile-img {
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
+
+.tile-btm {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.tile-title {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.tile-descrip {
+  font-weight: 400;
+}
+
+.tile-icons {
+  display: flex;
+  height: clamp(32px, 20%, 75px);
+  gap: 0.5rem;
+}
+
+.tile-icons .icon {
+  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
